@@ -43,8 +43,8 @@ function Cake() {
         lowFrequencyValues.reduce((sum, value) => sum + value, 0) /
         lowFrequencyValues.length;
 
-      const blowThreshold = 55; // Lower threshold for softer blow detection
-      const requiredDuration = 1000; // 1 sec softer blow required
+      const blowThreshold = 20; // Lower threshold for softer blow detection
+      const requiredDuration = 700; // 1 sec softer blow required
 
       if (averageLowFrequency > blowThreshold) {
         if (!blowStartTime) {
